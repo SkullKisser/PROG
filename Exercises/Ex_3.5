@@ -1,0 +1,95 @@
+#include <iostream>;
+using namespace std;
+
+int mdc(int x, int y)
+{
+	if (y == 0)
+	{
+		return x;
+	}
+	else
+	{
+		return mdc(y, x % y);
+	}
+}
+
+void reduceFracc(int &numerator, int &denominator)
+{
+	int div, n, d;
+
+	if (numerator < denominator)
+	{
+		n = denominator;
+		d = numerator;
+	}
+	else
+	{
+		n = numerator;
+		d = denominator;
+	}
+
+	div = mdc(n, d);
+	numerator = numerator / div;
+	denominator = denominator / div;
+
+	if (denominator == 1) { cout << numerator; }
+	else { cout << numerator << "/" << denominator; }
+}
+
+int operation(int num1, int denom1, char op, int num2, int denom2)
+{
+	switch (op)
+	{
+		int num, denom;
+
+		case '*':
+			num = num1 * num2;
+			denom = denom1 * denom2;
+			reduceFracc(num, denom);
+			break;
+
+		case '/':
+			num = num1 * denom2;
+			denom = denom1 * num2;
+			reduceFracc(num, denom);
+			break;
+
+		case '+':
+			num1 *= denom2;
+			num2 *= denom1;
+			num = num1 + num2;
+			denom = denom1 * denom2;
+			reduceFracc(num, denom);
+			break;
+			
+		case '-':
+			num1 *= denom2;
+			num2 *= denom1;
+			num = num1 - num2;
+			denom = denom1 * denom2;
+			reduceFracc(num, denom);
+			break;
+
+		default: 
+			cout << "Invalid operation!";
+	}
+	return 0;
+}
+
+int main()
+{
+	int num1, denom1, num2, denom2;
+	char op, slash1, slash2;
+	
+	cout << "Type the 1st fraction: ";
+	cin >> num1 >> slash1 >> denom1;
+	cout << "Choose the operand: ";
+	cin >> op;
+	cout << "Type the 2nd fraction: ";
+	cin >> num2 >> slash2 >> denom2;
+
+	operation(num1, denom1, op, num2, denom2);
+
+	_getwch();
+	return 0;
+}

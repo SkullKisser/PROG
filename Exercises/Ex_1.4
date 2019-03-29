@@ -1,1 +1,19 @@
+#include <iostream>
+using namespace std;
 
+int main()
+{
+	float a, b, c, d, e, f, x, y;
+	
+	cout << "Type the values of a to f: ";
+	cin >> a >> b >> c >> d >> e >> f;
+
+	x = (c*e - b * f) / (a*e - b * d);
+	y = (a*f - c * d) / (a*e - b * d);
+
+	cout << "x = " << x << endl;
+	cout << "y = " << y;
+
+	_getwch();
+	return 0;
+}

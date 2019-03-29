@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int hours1, mins1, secs1, hours2, mins2, secs2, days, hours, mins, secs;
+	cout << "Tempo 1 (horas minutos segundos) ? ";
+	cin >> hours1 >> mins1 >> secs1;
+	cout << "Tempo 2 (horas minutos segundos) ? ";
+	cin >> hours2 >> mins2 >> secs2;
+
+	secs = secs1 + secs2;
+	mins = mins1 + mins2;
+	hours = hours1 + hours2;
+	days = 0;
+
+	if (secs >= 60) {mins += 1;
+	secs -= 60; }
+	if (mins >= 60) {hours += 1;
+	mins -= 60; }
+	if (hours >= 24) {days += 1;
+	hours -= 24; }
+
+	cout << "Soma dos tempos: " << days <<" dias, " << hours << " horas, " << mins << " minutos e " << secs << " segundos";
+
+	_getwch();
+	return 0;
+}

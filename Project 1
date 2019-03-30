@@ -1,55 +1,31 @@
 #include <iostream>
+#include <fstream>
 #include <string>
+#include "structs.h"
 using namespace std;
 
-struct Agency
-{
-
-
-};
-
-struct Client
-{
-
-
-};
-
-struct TravelPack
-{
-
-
-
-};
-struct Address //Variáveis para a morada
-{
-	string street;
-	string number;
-	string floor;
-	string zipcode;
-	string city;
-};
-
-
-struct Date
-{
-
-
-};
 
 int main()
 {
 	int option;
 
-	cout << "Bem-vindo(a) a agencia! (inserir nome da agencia dps)" << endl;
-	cout << "" << endl;
-	cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::" << endl;
-	cout << "" << endl;
+	//!!!MENU
+
+	cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::" << endl << "" << endl;
+	cout << "Bem-vindo(a)!" << endl << "" << endl;
+	cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::" << endl << "" << endl;
 	cout << "[1] --> Gestao de Clientes" << endl;
 	cout << "[2] --> Gestao de Pacotes Turisticos" << endl;
 	cout << "[3] --> Visualizacao de Informacao" << endl;
 	cout << "" << endl;
-	cout << "Indique a opcao consoante o que pretende aceder:" << endl;
+	cout << "Indique a opcao consoante o que pretende aceder: ";
 	cin >> option;
+	cout << "" << endl;
+	cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::" << endl << "" << endl;
+
+	//MENU!!!
+
+
 
 	switch (option)
 	{

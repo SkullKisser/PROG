@@ -1,1 +1,71 @@
+#include <iostream>
+#include <string>
+using namespace std;
 
+struct Agency
+{
+
+
+};
+
+struct Client
+{
+
+
+};
+
+struct TravelPack
+{
+
+
+
+};
+struct Address //Variáveis para a morada
+{
+	string street;
+	string number;
+	string floor;
+	string zipcode;
+	string city;
+};
+
+
+struct Date
+{
+
+
+};
+
+int main()
+{
+	int option;
+
+	cout << "Bem-vindo(a) a agencia! (inserir nome da agencia dps)" << endl;
+	cout << "" << endl;
+	cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::" << endl;
+	cout << "" << endl;
+	cout << "[1] --> Gestao de Clientes" << endl;
+	cout << "[2] --> Gestao de Pacotes Turisticos" << endl;
+	cout << "[3] --> Visualizacao de Informacao" << endl;
+	cout << "" << endl;
+	cout << "Indique a opcao consoante o que pretende aceder:" << endl;
+	cin >> option;
+
+	switch (option)
+	{
+		case 1:
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+
+
+		default: cout << "Opcao invalida! Por favor insira uma das opcoes apresentadas acima.";
+		break;
+	}
+	
+	
+	_getwch();
+	return 0;
+}

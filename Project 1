@@ -19,7 +19,7 @@ int main()
 	int option;
 	char agency_file[25];
 
-	//!!!MENU
+	//!!!MENU PRINCIPAL
 
 	cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::" << endl << "" << endl;
 	cout << "Bem-vindo(a)!" << endl << "" << endl;
@@ -50,27 +50,61 @@ int main()
 	cout << "" << endl;
 	cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::" << endl << "" << endl;
 
-	//MENU!!!
+	//MENU PRINCIPAL!!!
 
 
 	switch (option)
 	{
-		case 1:
-			//aplicar a função pra clients;
+		case 1: //clients
 
-			readClientsList();
+			int opclient;
+			
+			cout << "--------------------" << endl;
+			cout << "|Gestao de Clientes|" << endl << "" << endl;
+			cout << "--------------------" << endl << "" << endl;
+			cout << "[1] --> Lista de Clientes" << endl;
+			cout << "[2] --> Procurar um cliente" << endl;
+			cout << "[3] --> Alterar informacao de clientes" << endl;
+			cout << "[4] --> Acrescentar clientes" << endl;
+			cout << "[5] --> Remover clientes" << endl << "" << endl;
+			cout << "Indique a opcao consoante o que pretende aceder: ";
+			cin >> opclient;
+
+			if (opclient == 1) { readClientsList(); }
+			else if (opclient == 2) { ; }
+			else if (opclient == 3) { ; }
+			else if (opclient == 4) { ; }
+			else if (opclient == 5) { ; }
+			else { cout << "Insira uma opcao valida!"; }
 
 			break;
 		
-		case 2:
-			//aplicar a função pra packs;
+		case 2: //packs
+			
+			int opack;
 
-			readPacksList();
+			cout << "------------------------------" << endl;
+			cout << "|Gestao de Pacotes Turisticos|" << endl;
+			cout << "------------------------------" << endl << "" << endl;
+			cout << "[1] --> Lista de Pacotes" << endl;
+			cout << "[2] --> Procurar um pacote" << endl;
+			cout << "[3] --> Alterar informacao de pacotes" << endl;
+			cout << "[4] --> Acrescentar pacotes" << endl;
+			cout << "[5] --> Remover pacotes" << endl;
+			cout << "Indique a opcao consoante o que pretende aceder: ";
+			cin >> opack;
+
+			if (opack == 1) { readPacksList(); }
+			else if (opack == 2) { ; }
+			else if (opack == 3) { ; }
+			else if (opack == 4) { ; }
+			else if (opack == 5) { ; }
+			else { cout << "Insira uma opcao valida!"; }
 
 			break;
 		
 		
-		case 3:
+		case 3: //visualização
 			
 			
 			

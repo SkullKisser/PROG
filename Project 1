@@ -1,18 +1,45 @@
 #include <iostream>
-#include <fstream>
 #include <string>
+#include <vector>
+#include <fstream>
+#include <cstdlib>
 #include "structs.h"
+#include "functions.h"
 using namespace std;
 
+//!!!CHAMADAS DE FUNÇÕES
+
+void readClientsList();
+void readPacksList();
+
+//CHAMADAS DE FUNÇÕES!!!
 
 int main()
 {
 	int option;
+	char agency_file[25], clients_file[25], packs_file[25];
 
 	//!!!MENU
 
 	cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::" << endl << "" << endl;
 	cout << "Bem-vindo(a)!" << endl << "" << endl;
+	cout << "Por favor, indique o nome do ficheiro relativo a agencia: ";
+	cin.getline(agency_file, 25); //introdução do nome agency.txt
+	
+	ifstream agencyFile(agency_file);
+	vector<string> agency_info;
+	string name;
+	if (agencyFile.is_open()) //abrir ou nao ficheiro
+	{
+		while (getline(agencyFile, name))
+		{
+			agency_info.push_back(name);
+		}
+		agencyFile.close();
+	}
+	else cout << "Impossivel abrir o ficheiro!";
+	
+	cout << "" << endl;
 	cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::" << endl << "" << endl;
 	cout << "[1] --> Gestao de Clientes" << endl;
 	cout << "[2] --> Gestao de Pacotes Turisticos" << endl;
@@ -26,14 +53,27 @@ int main()
 	//MENU!!!
 
 
-
 	switch (option)
 	{
 		case 1:
+			//aplicar a função pra clients;
+
+			readClientsList();
+
 			break;
+		
 		case 2:
+			//aplicar a função pra packs;
+
+			readPacksList();
+
 			break;
+		
+		
 		case 3:
+			
+			
+			
 			break;
 
 

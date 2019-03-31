@@ -17,7 +17,7 @@ void readPacksList();
 int main()
 {
 	int option;
-	char agency_file[25], clients_file[25], packs_file[25];
+	char agency_file[25];
 
 	//!!!MENU
 
